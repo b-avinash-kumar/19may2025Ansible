@@ -1,0 +1,4 @@
+---
+webpackubuntu: apache2
+webpackredhat: httpd
+installjavaubuntu: openjdk-21-jdk 

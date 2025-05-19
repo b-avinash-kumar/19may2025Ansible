@@ -1,0 +1,16 @@
+---
+- hosts: appservers
+  become: yes
+  tasks:
+  - name: ping
+    ping:
+  - name: install apache2 server
+    apt:
+      name: "{{webpackubuntu}}"
+      state: present
+    when: ansible_os_family=="Debian"
+  - name: install java 21
+    apt:
+      name: "{{installjavaubuntu}}"
+      state: present
+    when: ansible_os_family=="Debian"
