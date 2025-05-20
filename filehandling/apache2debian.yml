@@ -8,7 +8,7 @@
     apt:
       name: "{{webpackondebian}}"
       state: present 
-    notify: restartserver 
+    notify: startserver 
   - name: modyfing the index.html dynamically using template 
     template: 
       src: myindex.j2 
