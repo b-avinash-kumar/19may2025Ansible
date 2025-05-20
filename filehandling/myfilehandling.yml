@@ -7,8 +7,6 @@
   - include_tasks: filecreate.yml
   - include_tasks: foldercreate.yml
   - include_tasks: copy.yml 
-  - name: Download Jenkins WAR using curl for ubuntu as get_url module not working
-    ansible.builtin.shell: curl -L -o /home/maha/myfolder/jenkins.war https://updates.jenkins.io/download/war/2.509/jenkins.war
-    when: ansible_os_family=="Debian"
+  
   
       
