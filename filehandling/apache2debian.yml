@@ -8,3 +8,11 @@
     apt:
       name: "{{webpackondebian}}"
       state: present 
+  - include_tasks: dynfh.yml
+    notify: restartserver
+
+  handlers: 
+  - name: restartserver
+    service:
+      name: apache2
+      state: restarted

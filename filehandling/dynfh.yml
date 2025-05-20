@@ -1,0 +1,5 @@
+--- 
+  - name: Adding content to index.html in apache2 (node side) /var/www/html/index.html using template module 
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
