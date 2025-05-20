@@ -1,7 +1,5 @@
 --- 
 - hosts: ubuntuserver
-  vars:
-    ansible_python_interpreter: /opt/ansible-env/bin/python
   become: yes
   tasks: 
   - name: ping - testing purpose
@@ -14,5 +12,8 @@
       url: https://updates.jenkins.io/download/war/2.509/jenkins.war
       dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
-      validate_certs: no
-      mode: '0644'
+  
+  - name: Download Jenkins WAR using curl
+    ansible.builtin.shell: curl -L -o /opt/jenkins/jenkins.war https://updates.jenkins.io/download/war/2.509/jenkins.war
+
+      
