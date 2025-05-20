@@ -1,0 +1,9 @@
+--- 
+- hosts: ubuntuserver
+  become: yes
+  tasks: 
+  - name: ping - testing purpose
+    ping:
+  - include_tasks: filecreate.yml
+  - include_tasks: foldercreate.yml
+  - include_tasks: copy.yml

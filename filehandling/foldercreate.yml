@@ -1,0 +1,5 @@
+--- 
+  - name: create a folder on ubuntu node
+    file:
+      path: /home/maha/myfolder
+      state: directory

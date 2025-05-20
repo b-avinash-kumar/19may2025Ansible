@@ -1,0 +1,5 @@
+--- 
+  - name: copy file 
+    copy:
+      src: mytestfile
+      dest: /home/maha/myfolder2
