@@ -1,5 +1,5 @@
 --- 
-- hosts: ubuntuserver
+- hosts: debianserver
   become: yes
   tasks: 
   - name: ping - testing purpose
