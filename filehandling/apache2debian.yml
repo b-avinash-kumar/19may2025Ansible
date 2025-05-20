@@ -1,0 +1,10 @@
+--- 
+- hosts: debianserver
+  become: yes
+  tasks: 
+  - name: testing by ping 
+    ping:
+  - name: install apache2 on debian 
+    apt:
+      name: "{{webpackondebian}}"
+      state: present 
