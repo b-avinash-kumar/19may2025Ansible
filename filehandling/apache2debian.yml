@@ -8,7 +8,10 @@
     apt:
       name: "{{webpackondebian}}"
       state: present 
-  - include_tasks: dynfh.yml
+  - name: modyfing the index.html dynamically using template 
+    template: 
+      src: myindex.j2 
+      dest: /var/www/html/index.html
     notify: restartserver
 
   handlers: 
