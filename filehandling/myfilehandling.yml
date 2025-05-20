@@ -10,5 +10,5 @@
   - name: downlod a jenkins.war file 
     get_url:
       url: https://updates.jenkins.io/download/war/2.510/jenkins.war
-      dest: /home/maha/myfolder
+      dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
