@@ -17,5 +17,5 @@
   
   - name: copy file 
     copy:
-      src: /home/maha/mytestfile
+      src: mytestfile
       dest: /home/maha/myfolder
