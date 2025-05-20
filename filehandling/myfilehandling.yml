@@ -1,5 +1,7 @@
 --- 
 - hosts: ubuntuserver
+  vars:
+    ansible_python_interpreter: /opt/ansible-env/bin/python
   become: yes
   tasks: 
   - name: ping - testing purpose
@@ -13,3 +15,4 @@
       dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
       validate_certs: no
+      mode: '0644'
