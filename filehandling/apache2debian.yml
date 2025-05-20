@@ -8,15 +8,12 @@
     apt:
       name: "{{webpackondebian}}"
       state: present 
-    notify: stop server 
-    
+        
   - name: modyfing the index.html dynamically using template 
     template: 
       src: myindex.j2 
       dest: /var/www/html/index.html
     notify: start server
-
-
   handlers: 
   - name: start server
     service:
