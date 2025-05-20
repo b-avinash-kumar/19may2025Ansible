@@ -13,10 +13,10 @@
     template: 
       src: myindex.j2 
       dest: /var/www/html/index.html
-    notify: restartserver
+    notify: startserver
 
   handlers: 
-  - name: restartserver
+  - name: startserver
     service:
       name: apache2
-      state: restarted
+      state: started
