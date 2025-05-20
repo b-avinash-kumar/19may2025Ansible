@@ -1,0 +1,21 @@
+---
+- hosts: ubuntuserver
+  become: yes
+  tasks:
+  - name: pinging to ubuntu node
+    ping:
+
+  - name: create a file on ubuntu node
+    file:
+      path: /home/maha/myfirstFile
+      state: touch
+  
+  - name: create a folder on ubuntu node
+    file:
+      path: /home/maha/myfolder
+      state: directory
+  
+  - name: copy file from /home/maha to /home/maha/myfolder
+    copy:
+      src: /home/maha/myfirstFile
+      dest: /home/maha/myfolder
