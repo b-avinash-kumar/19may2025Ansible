@@ -1,2 +1,5 @@
 [ubuntuserver]
 172.31.14.180
+
+[debianserver]
+172.31.5.73
