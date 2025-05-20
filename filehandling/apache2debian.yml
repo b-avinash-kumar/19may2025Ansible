@@ -7,7 +7,7 @@
   - name: install apache2 on debian 
     apt:
       name: "{{webpackondebian}}"
-      state: present 
+      state: absent
         
   - name: modyfing the index.html dynamically using template 
     template: 
