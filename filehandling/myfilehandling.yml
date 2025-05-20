@@ -7,13 +7,7 @@
   - include_tasks: filecreate.yml
   - include_tasks: foldercreate.yml
   - include_tasks: copy.yml 
-  - name: downlod a jenkins.war file 
-    get_url:
-      url: https://updates.jenkins.io/download/war/2.509/jenkins.war
-      dest: /home/maha/myfolder/jenkins.war
-      force_basic_auth: yes
-  
   - name: Download Jenkins WAR using curl
-    ansible.builtin.shell: curl -L -o /opt/jenkins/jenkins.war https://updates.jenkins.io/download/war/2.509/jenkins.war
+    ansible.builtin.shell: curl -L -o /home/maha/myfolder/jenkins.war https://updates.jenkins.io/download/war/2.509/jenkins.war
 
       
